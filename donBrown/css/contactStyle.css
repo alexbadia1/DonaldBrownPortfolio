@@ -1,0 +1,155 @@
+*, *::before, *::after {margin: 0; padding: 0; box-sizing: inherit; }
+
+.html {font-size:62.5%;} 
+
+.body {
+	margin-left: .75rem;
+	margin-right: .75rem;
+	height: 100%;
+	font-family: "Lato", sans-serif;
+	background-color: #f9f9f9; }
+
+.headerC{
+    background-color: white;
+    display: inline-block;
+    width: 100%; }
+
+.header__navigation--contact {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-around; }
+
+.header__navigation--contact a:link, .header__navigation--contact a:visited {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem; 
+    margin-left: 2rem; }
+
+.header__navigation--contact a:hover {
+    color: black;
+    text-decoration: none;
+    font-size: 1.75rem;
+    text-decoration: underline;
+    font-weight: 700; }
+
+
+.subSection--headings, .subSection--text {margin-left: 2%;}
+
+#mobile-note {display: none;}
+
+.navigation--contact {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0,0,0,.70);
+	z-index: 99;
+	font-size: 1.5rem;
+	transform: translateY(30%); }
+
+.navigation--contact--links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	color: white; }
+
+.contact--links, .contact--links:visited {
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 1.5em; }
+
+
+.contact--links:hover {color: #f6cb74; background-color: rgba(0,0,0,.40);}
+
+.special:link {background-color: rgb(212,175,55); padding: .5rem 1rem;}
+
+.blue:link {background-color: #3b5998; padding: .5rem 1rem;}
+
+/*background-attachment fixed gives it the affect while you scroll!!! */ 
+
+.section1, .section2 {display: block; position:relative; height: 100vh; margin-right: 2rem; margin-left: 2rem;}
+
+.image1-container--contact {
+    background-image: url(../images/sunset.jpg); 
+    background-size: 50%; 
+    background-position: center left;
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;}
+
+.image1-details--contact {
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-75%); }
+
+.image2-container--contact {
+    background-image: url(../images/landscape.jpg);  
+    background-size: 50%; 
+    background-position: center left;
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; }
+
+.image2-details--contact {
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%); }
+
+@media only screen and (max-width: 880px) {
+    .navigation--contact {display: none; }
+    .section1 {height: 120vh;}
+    .section2 {height: 120vh;}
+
+    .header {margin-bottom: 3rem;}
+    
+    .header__navigation--contact {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: space-around; }
+
+    .image2-details--contact, .image1-details--contact  {
+        display: block;
+        position: absolute;
+        width: 100%;
+        transform: translate(0); }
+
+    .image1-container--contact, .image2-container--contact {
+        background-size: 100%; 
+        background-position: top;
+        width: 100%;
+        height: 50vh;
+    }
+
+    #mobile-note {
+        display: block;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-right: 2rem; 
+        margin-left: 2rem;
+    }
+}
