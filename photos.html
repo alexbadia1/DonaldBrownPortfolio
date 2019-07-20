@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is a website about Donald Brown running for the judge of Poughkeepsie">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="judge, primaries, poughkeepsie, Donald Brown">
+	<meta name="author" content="Alex Badia">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css\donBrownStyle.css">
+	<title> Donald Brown Poughkeepsie Judge Photos </title>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="header">
+		<nav class="header__navigation">
+			<ul class="navBar">
+				<li> <a id="white-link" href="index.html"> Home </a> </li>
+				<li> <a id="white-link" href="bio.html"> Biography </a> </li>
+				<li> <a id="white-link" href="photos.html"> Photos </a> </li>
+				<li> <a id="white-link" href="qualifications.html"> Why I Am Qualified </a> </li>
+				<li> <a id="blue-link" href="#"> Faceb </a> </li>
+				<li> <a id="red-link" href="#"> Donate Now </a> </li>
+			</ul>
+		</nav>
+
+		<div class="heading-flex-column">
+
+			<div class="header__text-boxP" id="primary-section">
+
+				<div class="slideshow-container" id='show-slides'>
+
+					<div class="mySlides-2 mySlides fade">
+						<div class="numbertext">2 / 8</div>
+						<div class="text-2"> The Brown Family:
+							"Daughter in law Merideth with Django, Don, Grace with Charlie, Trinity and Lily."</div>
+					</div>
+
+					<div class="mySlides-1 mySlides fade">
+						<div class="numbertext">1 / 8</div>
+						<div class="text">The Campaign Team:
+							"Don, his campaign chair/finance Donna and his beautiful granddaugters"</div>
+					</div>
+
+					<div class="mySlides-3 mySlides fade">
+						<div class="numbertext">3 / 8</div>
+						<div class="text">"Grace thinks Pop pop's jokes are funny. Lily is not so sure."</div>
+					</div>
+
+					<div class="mySlides-4 mySlides fade">
+						<div class="numbertext">4 / 8</div>
+						<div class="text">Family Trip To Ireland:
+							"Exploring roots on a recent family trip to the Emerald Isle"</div>
+					</div>
+
+					<div class="mySlides-5 mySlides fade">
+						<div class="numbertext">5 / 8</div>
+						<div class="text-5"> "Don and his son Brian reuniting with cousin James McCarthy in County
+							Kerry."</div>
+					</div>
+
+					<div class="mySlides-6 mySlides fade">
+						<div class="numbertext">6 / 8</div>
+						<div class="text">Sports Are Fun:
+							"Don and his granddaughters getting in shape to hit the campaign trail."</div>
+					</div>
+
+					<div class="mySlides-7 mySlides fade">
+						<div class="numbertext">7 / 8</div>
+						<div class="text">"On The Campaign Trail"</div>
+					</div>
+
+					<div class="mySlides-8 mySlides fade">
+						<div class="numbertext">8 / 8</div>
+						<div class="text">"On the Campaign Trail"</div>
+					</div>
+
+				</div>
+
+				<a id='show-next' class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a id='show-previous' class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<br>
+
+				<div id='show-slide-buttons' class='slideButtons'>
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+					<span class="dot" onclick="currentSlide(7)"></span>
+					<span class="dot" onclick="currentSlide(8)"></span>
+				</div>
+
+			</div>
+			<script>
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					var dots = document.getElementsByClassName("dot");
+					if (n > slides.length) { slideIndex = 1 }
+					if (n < 1) { slideIndex = slides.length }
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					slides[slideIndex - 1].style.display = "block";
+					dots[slideIndex - 1].className += " active";
+				}
+			</script>
+			<!-- <h1 class = "heading-primary">
+						<span class = "heading-primary--main"> Donald Brown Photos</span>
+						<span class = "heading-primary--sub"> <i>"A collection of photos ranging from my grandchildren, wife, 
+							dogs, trips to Ireland and reuniting with my son. There are also photos following my campaign trail
+							with the people."</i>
+						</span>
+					</h1> -->
+			<!-- <a href = "photos.html#firstPhoto" class = "button--gray button--gray--animate"> View Photos... </a> -->
+		</div>
+		</div>
+		<ul class="flex-row-logo">
+			<li> <a id="camera" href="bio.html"> P </a> </li>
+			<li> <a id="ribbon" href="awards.html"> T </a> </li>
+			<li> <a id="question" href="qualifications.html"> A </a> </li>
+		</ul>
+
+		<div class="flex-row-header">
+			<div class="photo__text-box">
+				<h1 class="photo__heading-primary">
+					<span class="heading--gold"> Biography </span>
+					<span class="heading--gold--sub"> Donald's Story </span>
+				</h1>
+			</div>
+
+			<div class="awards__text-box">
+				<h1 class="awards__heading-primary">
+					<span class="heading--gold"> Awards </span>
+					<span class="heading--gold--sub"> Awards and Achievements </span>
+				</h1>
+			</div>
+
+			<div class="blank__text-box">
+				<h1 class="blank__heading-primary">
+					<span class="heading--gold"> Why I Am Qualified </span>
+					<span class="heading--gold--sub"> Experience and Notable Achievements </span>
+				</h1>
+			</div>
+		</div>
+
+		<div class="header__image-container1">
+			<img class="flag" src="images/flagBackground.jpg" alt="Donald D. Brown Junior">
+		</div>
+
+		<div class="header__image-flex-container2">
+			<div class="header__image-container2">
+				<img class="donBrown" src="images/electImg.jpg" alt="Donald D. Brown Junior">
+			</div>
+		</div>
+		<div class="footer"> </div>
+	</header>
+
+	<!-- Section -->
+	<section class="photos-flex-grid-column" id="show-photos">
+
+		<div class="photos-flex-row">
+			<div id="firstPhoto" class="photo-case">
+				<a> <img src="images/family.jpg" class="family" alt="family" width="100%"> </a>
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> The Campaign Team </h1>
+				<p class="photo--description"> <i>" Don, his campaign chair/finance Donna and his beautiful
+						granddaugters"</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+			<div class="photo-case">
+				<img src="images/dog.jpeg" class="dogs" alt="family and dogs" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> The Brown Family </h1>
+				<p class="photo--description"> <i>"Daughter in law Merideth with Django, Don, Grace with Charlie,
+						Trinity and Lily."</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+
+			<div class="photo-case">
+				<img src="images/grandchildren.jpeg" class="grandchildren" alt="grandchildren" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> Don With... </h1>
+				<p class="photo--description"> <i>"Grace thinks Pop pop's jokes are funny. Lily is not so sure."</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+
+			<div class="photo-case">
+				<img src="images/ireland1.jpeg" class="ireland1" alt="ireland" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> Family Trip To Ireland </h1>
+				<p class="photo--description"> <i>"Exploring roots on a recent family trip to the Emerald Isle"</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+			<div class="photo-case">
+				<img src="images/men.jpeg" class="men" alt="men" height="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> Family Reunion </h1>
+				<p class="photo--description"> <i>"Don and his son Brian reuniting with cousin James McCarthy in County
+						Kerry."</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+			<div class="photo-case">
+				<img src="images/basketball1.jpeg" class="basketball1" alt="basketball" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> Sports For Fun </h1>
+				<p class="photo--description"> <i>"Don and his granddaughters getting in shape to hit the campaign
+						trail."</i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+			<div class="photo-case">
+				<img src="images/campaignTrail1.JPG" class="campaignTrail1" alt="CampaignTrail1" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> On the Campaign Trail </h1>
+				<p class="photo--description"> <i></i></p>
+			</div>
+		</div>
+
+		<div class="photos-flex-row">
+			<div class="photo-case">
+				<img src="images/campaignTrail2.JPG" class="campaignTrail2" alt="CampaignTrail2" width="100%">
+			</div>
+			<div class="photo-details">
+				<h1 class="photo--title"> On the Campaign Trail </h1>
+				<p class="photo--description"> <i></i></p>
+			</div>
+		</div>
+
+	</section>
+</body>
+
+</html>
