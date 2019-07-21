@@ -765,7 +765,7 @@ animation-timing-function: ease-out; }
 
 @media only screen and (max-width: 1000px) and (min-width: 700px) {
 
-	.header, .headerA, .headerP {background-image: none !important;}
+	.header, .headerA, .headerP {background-color: white; background-image: none;}
 
 	#show-slide-buttons {display: none;}
 	#show-previous {display: none;}
