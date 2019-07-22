@@ -16,48 +16,52 @@
 
 	<!-- Header -->
 	<header class="header">
+
+		<!-- Top bar navigation -->
 		<nav class="header__navigation">
 			<ul class="navBar">
 				<li> <a id="white-link" href="index.html"> Home </a> </li>
+				<li id = 'mobile-link'> <a id="white-link" href="awards.html"> Awards </a> </li>
 				<li> <a id="white-link" href="bio.html"> Biography </a> </li>
 				<li> <a id="white-link" href="photos.html"> Photos </a> </li>
-				<li> <a id="white-link" href="qualifications.html"> Why I Am Qualified </a> </li>
-				<li id = 'mobile-link'> <a id="white-link" href="#"> Facebook </a> </li>
-				<li id = 'mobile-link'> <a id="white-link" href="#"> Donate Now </a> </li>
+				<li> <a id="white-link" href="qualifications.html"> Why I Am Running </a> </li>
+
+				<!-- Creates two mobile links for mobile viewports -->
+				<li id='mobile-link'> <a id="white-link" href="#"> Facebook </a> </li>
+				<li id='mobile-link'> <a id="white-link" href="donate.html"> Donate Now </a> </li>
+
+				<!-- Icon links only show on tablets and desktops -->
 				<li> <a id="blue-link" href="#"> Faceb </a> </li>
-				<li> <a id="red-link" href="#"> Donate Now </a> </li>
+				<li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
 			</ul>
 		</nav>
 
+		<!-- Mobile page title and subtitle that won't show on tablets or desktops-->
+		<div class="heading-flex-column" id="show-photos">
+			<div class="header__text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary--main"> Photos </span>
+					<span class="heading-primary--sub"> <i>"A court system which has functioned on autopilot for too
+							long is collapsing under its own weight in the face of an unprecedented drug epidemic, pervasive
+							mental illness and costly and crippling incarceration rates. The failure of the courts to adapt to
+							these changes is reaching crisis stage. My experience makes me uniquely qualified to bring a fresh
+							but seasoned response to these challenges."</i></span>
+				</h1>
+				<a href="#career" class="button--gray button--gray--animate"> View Photos </a>
+			</div>
+		</div>
 
-		<div class="heading-flex-column" id = "show-photos">
+		<!-- Slide show positioned in a flex container to be responsive to different viewports-->
+		<div class="heading-flex-column-P">
 
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main"> Photos </span>
-                    <span class="heading-primary--sub"> <i>"A court system which has functioned on autopilot for too
-                            long
-                            is collapsing under its own weight in the face of an unprecedented drug epidemic, pervasive
-                            mental
-                            illness and costly and crippling incarceration rates. The failure of the courts to adapt to
-                            these
-                            changes is reaching crisis stage. My experience makes me uniquely qualified to bring a fresh
-                            but
-                            seasoned response to these challenges."</i></span>
-                </h1>
-                <a href="#career" class="button--gray button--gray--animate"> View Photos </a>
-            </div>
-        </div>
-
-		<div class="heading-flex-column">
-
+			<!-- Slide show will disappear on mobile -->
 			<div class="header__text-boxP" id="keyPrimarySection">
 
 				<div class="slideshow-container" id='show-slides'>
 
 					<div class="mySlides-2 mySlides fade">
 						<div class="numbertext">2 / 8</div>
-						<div class="text-2"> The Brown Family:
+						<div class="text"> The Brown Family:
 							"Daughter in law Merideth with Django, Don, Grace with Charlie, Trinity and Lily."</div>
 					</div>
 
@@ -119,8 +123,9 @@
 				</div>
 
 			</div>
+
 			<script>
-				var slideIndex = 1;
+				let slideIndex = 1;
 				showSlides(slideIndex);
 
 				function plusSlides(n) {
@@ -147,41 +152,32 @@
 					dots[slideIndex - 1].className += " active";
 				}
 			</script>
-			<!-- <h1 class = "heading-primary">
-						<span class = "heading-primary--main"> Donald Brown Photos</span>
-						<span class = "heading-primary--sub"> <i>"A collection of photos ranging from my grandchildren, wife, 
-							dogs, trips to Ireland and reuniting with my son. There are also photos following my campaign trail
-							with the people."</i>
-						</span>
-					</h1> -->
-			<!-- <a href = "photos.html#firstPhoto" class = "button--gray button--gray--animate"> View Photos... </a> -->
 		</div>
-		</div>
+
+		<!-- Bottom navigation images -->
 		<ul class="flex-row-logo">
 			<li> <a id="camera" href="bio.html"> P </a> </li>
 			<li> <a id="ribbon" href="awards.html"> T </a> </li>
 			<li> <a id="question" href="qualifications.html"> A </a> </li>
 		</ul>
 
+		<!-- Bottom navigation subtitles -->
 		<div class="flex-row-header">
 			<div class="photo__text-box">
 				<h1 class="photo__heading-primary">
-					<span class="heading--gold"> Biography </span>
-					<span class="heading--gold--sub"> Donald's Story </span>
+					<span class="heading--gold"> Professional Career </span>
 				</h1>
 			</div>
 
 			<div class="awards__text-box">
 				<h1 class="awards__heading-primary">
 					<span class="heading--gold"> Awards </span>
-					<span class="heading--gold--sub"> Awards and Achievements </span>
 				</h1>
 			</div>
 
 			<div class="blank__text-box">
 				<h1 class="blank__heading-primary">
-					<span class="heading--gold"> Why I Am Qualified </span>
-					<span class="heading--gold--sub"> Experience and Notable Achievements </span>
+					<span class="heading--gold"> Why I Am Runinng </span>
 				</h1>
 			</div>
 		</div>
@@ -198,7 +194,7 @@
 		<div class="footer"> </div>
 	</header>
 
-	<!-- Section -->
+	<!-- Mobile photo grid-->
 	<section class="photos-flex-grid-column" id="show-photos">
 
 		<div class="photos-flex-row">
@@ -286,7 +282,6 @@
 				<p class="photo--description"> <i></i></p>
 			</div>
 		</div>
-
 	</section>
 </body>
 
