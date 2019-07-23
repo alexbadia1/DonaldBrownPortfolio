@@ -265,7 +265,7 @@ animation-timing-function: ease-out; }
 
 /* Bottom left navigation image-link */
 #camera:link, #camera:visited {
-	background-image: url(../images/electImg.jpg);
+	background-image: url(../images/DonBrownFullSquare1.jpg);
 	background-repeat: none;
 	background-size: cover;
 	background-position: center;
