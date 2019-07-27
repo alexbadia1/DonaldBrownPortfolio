@@ -11,7 +11,6 @@ body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
-	color: black;
 	padding: 3rem;
 	box-sizing: border-box;
 	background-color: white; }
@@ -19,8 +18,10 @@ body {
 strong { font-weight: 900; }
 
 /* Content controller */
-#mobile-link {display: none;}
+#mobile-donald-brown {width: 50%;}
+.mobile-link {display: none;}
 #show-photos {display: none;}
+#show-photos-mobile-grid {display: none;}
 .mobile-image {display: hidden; width:0; height:0}
 
 /* Header */
@@ -140,7 +141,7 @@ backface-visibility: hidden;
 margin-bottom: 2vh; }
 
 /* Header title text-styling */
-.heading-primary--main, .heading-primary--mainA, .heading-primary--mainP  {
+.heading-primary-main, .heading-primary-mainA, .heading-primary-mainP  {
 display: block;
 text-transform: uppercase;
 font-size: 2.1vw;
@@ -151,7 +152,7 @@ animation-duration: 2s;
 animation-timing-function: ease-out; }
 
 /* Header subtitle text-styling */
-.heading-primary--sub, .heading-primary--subA, .heading-primary--subP {
+.heading-primary-sub, .heading-primary-subA, .heading-primary-subP {
 display: block;
 font-size: 1.1vw;
 font-weight: 700;
@@ -161,13 +162,13 @@ animation-duration: 2s;
 animation-timing-function: ease-out; }
 
 /* Header title button */
-.button--gray {
+.button-gray {
 	background-color: #6c89c6;
 	color: black; 
 	font-weight: 700; }
 
 /* Header title button link */
-.button--gray:link, .button--gray:visited {
+.button-gray:link, .button-gray:visited {
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -178,17 +179,17 @@ animation-timing-function: ease-out; }
 	font-size: 1vw; }
 
 /* Header title button hover effect */
-.button--gray:hover {
+.button-gray:hover {
 	transform: translateY(-15%); 
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
 
 /* Header title button active effect */
-.button--gray:active {
+.button-gray:active {
 	transform: translateY(1%); 
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 /* Header title button flash effect initial state*/
-.button--gray::after {
+.button-gray::after {
 	content: "";
 	display: block;
 	height: 100%;
@@ -201,10 +202,10 @@ animation-timing-function: ease-out; }
 	background-color: #6c89c6; }
 
 /* Header title button animated flash effect */
-.button--gray:hover::after {transform: scaleX(1.4) scaleY(1.6); opacity: 0;}
+.button-gray:hover::after {transform: scaleX(1.4) scaleY(1.6); opacity: 0;}
 
 /* Header title button animation control */
-.button--gray--animate {
+.button-gray-animate {
 	animation: moveUp .5s ease-out .75s;
 	animation-fill-mode: backwards;
 	backface-visibility: hidden; }
@@ -321,12 +322,12 @@ animation-timing-function: ease-out; }
 .heading-gold {
 	display: block;
 	text-transform: uppercase;
-	font-size: 1.5vw;
+	font-size: 1.4vw;
 	font-weight: 900;
 	text-align: center; }
 
 /* Bottom navigation link subtitle */
-.heading--gold--sub {
+.heading-gold-sub {
 	display: block;
 	font-size: 1vw;
 	font-weight: 700;
@@ -426,7 +427,7 @@ animation-timing-function: ease-out; }
 	text-align: center; }
 
 /* Photo title text */
-.photo--title{
+.photo-title{
 	display: block;
 	width: 100%;
 	color: black;
@@ -440,7 +441,7 @@ animation-timing-function: ease-out; }
 	padding-left: 1rem; }
 
 /* Photo description text */
-.photo--description {
+.photo-description {
 	display: block;
 	width: 100%;
 	color: black;
@@ -635,24 +636,24 @@ to {opacity: 1} }
 /****************************************************Home Page Section***********************************************************/
 
 /* Section body */
-.home--body {
+.home-body {
 	display: inline; 
 	padding-left: 2rem; }
 
 /* Section body container */
-.home--body--container {
+.home-body-container {
 	padding-left: 16rem; 
 	padding-right: 27rem; }
 
 /* Section article primary header */
-.home--primary--header {
+.home-primary-header {
 	text-transform: uppercase;
 	display: block;
 	font-size: 3rem;
 	font-weight: 900; }
 
 /* Section article secondary header */
-.home--secondary--header {
+.home-secondary-header {
 	display: block;
 	font-size: 2rem;
 	font-weight: 700;
@@ -668,7 +669,7 @@ to {opacity: 1} }
 	margin-left: 6rem; }
 
 /* Section article paragraph text */
-.home--details {
+.home-details {
 	display: block;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -748,13 +749,13 @@ to {opacity: 1} }
 	.header__text-boxA {transform: translateY(50%);}
 
 	/* Font size adjustments */
-	.heading-primary--main, 
-	.heading-primary--mainA, 
-	.heading-primary--mainP { font-size: 2vw; }
+	.heading-primary-main, 
+	.heading-primary-mainA, 
+	.heading-primary-mainP { font-size: 2vw; }
 
-	.heading-primary--subP, 
-	.heading-primary--subP, 
-	.heading-primary--sub { font-size: 1.15vw; }
+	.heading-primary-subP, 
+	.heading-primary-subP, 
+	.heading-primary-sub { font-size: 1.15vw; }
 
 	/* Hiding the slide-show content */
 	#show-slide-buttons {display: none;}
@@ -764,15 +765,16 @@ to {opacity: 1} }
 	#keyPrimarySection {display: none;}
 
 	/* Hiding bottom navigation subtitles */
-	.heading--gold--sub {display: none;}
+	.heading-gold-sub {display: none;}
 
 	/* Reveal photos in flex column format */
 	#show-photos {display: flex;}
+	#show-photos-mobile-grid {display: flex;}
 	.photos-flex-grid-column {margin-top: 15rem;} 
 
 	/* Margin and padding adjustments */
-	.home--body--container {padding-left: 0; padding-right: 0;}
-	.home--details {margin-left: 7rem; margin-right: 2rem;}
+	.home-body-container {padding-left: 0; padding-right: 0;}
+	.home-details {margin-left: 7rem; margin-right: 2rem;}
 
 	/* Navigation Bar Font-size Adjustments */
 	.navBar a:link,
@@ -787,7 +789,7 @@ to {opacity: 1} }
 		z-index: 99999999999999;}
 
 	/* Resizing bottom navigation link titles */
-	.heading--gold {padding-top: 5rem; font-size: 1.5vw;}
+	.heading-gold {padding-top: 2rem; font-size: 1.5vw;}
 
 	/* Adjusting the top navigation bar width */
 	.header__navigationP .navBarP,
@@ -819,7 +821,7 @@ to {opacity: 1} }
 	}
 } /* large tablets and smaller desktops*/
 
-/*Large Tablets and Mobile Phones*/
+/*Small Tablets and Mobile Phones*/
 @media only screen and (max-width: 699px) and (min-width: 200px) {
 	
 	/* Hiding content for mobile */
@@ -843,8 +845,8 @@ to {opacity: 1} }
 	#red-link:active { display: none; }
 
 	/* Reveal mobile content */
-	#show-photos {display: flex;}
-	#mobile-link {display: initial;}
+	#show-photos, #show-photos-mobile-grid {display: flex;}
+	.mobile-link {display: initial;}
 
 	/* Changing the header into a column layout with the content stacked on top of each other */
 	.header, .headerA, .headerP {
@@ -887,21 +889,19 @@ to {opacity: 1} }
 	}
 
 	/* Styling of the new column navigation links */
-	#white-link {
+	.navBar a:link, .navBarA a:link, .navBarP a:link,
+	.navBar a:visited, .navBarA a:visited, .navBarP a:visited {
+		font-size: 1.5rem;
 		color:white; 
 		font-size: 2rem; 
-		padding: .5rem 1rem;
-	}
-
-	#white-link:hover {
+		padding: .5rem 1rem; }
+	
+	.navBar a:hover, .navBarA a:hover, .navBarP a:hover {
 		color: rgb(212,175,55); 
 		text-decoration: none; 
 		font-size: 1.75rem; 
 		text-decoration: underline; 
-		font-weight: 700; 
-	}
-
-	#white-link:visited {font-size: 1.5rem;}
+		font-weight: 700;  }
 
 	/* Centering the elect Donald Brown Image */
 	.image-section {display: inline; text-align: center; }
@@ -917,12 +917,12 @@ to {opacity: 1} }
 		margin-bottom: 2rem; }
 
 	/* Centering the main title and subtitle of each page and removing animation */
-	.heading-primary--main {
+	.heading-primary-main {
 		animation: none; 
 		text-align: center; 
 		font-size: 7vw;
 	}
-	.heading-primary--sub{
+	.heading-primary-sub{
 		animation: none; 
 		text-align:center; 
 		margin-bottom: 1rem; 
@@ -930,7 +930,7 @@ to {opacity: 1} }
 	}
 
 	/* Remove animation from the button */
-	.button--gray:link {
+	.button-gray:link {
 		animation: none; 
 		display: inline; 
 		position: initial; 
@@ -939,7 +939,7 @@ to {opacity: 1} }
 	}
 
 	/* Refromat the body of the main article */
-	.home--body {
+	.home-body {
 		display: block; 
 		padding-left: 2rem;
 	}
@@ -953,20 +953,20 @@ to {opacity: 1} }
 	}
 
 	/* Reformatting the article sections for mobile */
-	.home--body--container {
+	.home-body-container {
 		width: 100%; 
 		margin: 0; 
 		padding: 0;
 	}
 
-	.home--primary--header {
+	.home-primary-header {
 		text-transform: uppercase;
 		font-size: 7vw;
 		font-weight: 900;
 		margin-top: 1rem; 
 		text-align: left; }
 	
-	.home--secondary--header {
+	.home-secondary-header {
 		font-size: 5.2vw;
 		font-weight: 700;
 		margin-left: 2vw; }
@@ -977,7 +977,7 @@ to {opacity: 1} }
 		font-weight: 700;
 		margin-left: 4rem; }
 	
-	.home--details {
+	.home-details {
 		overflow-wrap: break-word;
 		word-wrap: break-word; 
 		font-size: 3.2vw;
