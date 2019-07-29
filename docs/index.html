@@ -17,24 +17,52 @@
 <body>
 
 	<script>
-		if(window.innerHeight > window.innerWidth){
- 			alert("Please use Landscape!");
+		if (window.innerHeight > window.innerWidth) {
+			alert("Please use Landscape!");
 		}		
 	</script>
+
+	<div class="directory">
+		<input type="checkbox" class="directory__checkbox" id="navi-toggle">
+		<label for="navi-toggle" class="directory__button">
+			<span class="navigation__icon"> &nbsp;</span>
+		</label>
+
+		<div class="directory__background"></div>
+
+		<div class="directory__nav">
+			<h1 class="directory-title" style = "color: white;"> Directory </h1>
+			<hr>
+
+			<ul class="left-directory-list">
+				<li class = "directory__item"><a href="#" class="directory__link"> Voting Details </a></li>
+				<li class = "directory__item"><a href="#" class="directory__link"> 2019 Election Calender </a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Early Voting </a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Early Voting Sites</a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> General Election Polling Sites </a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Absentee Ballots </a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Getting To The Polls </a></li>
+				<li class = "directory__item"><a href="#" class="directory__link"> Professional Career</a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Early Years </a></li>
+				<li class="directory__item"><a href="#" class="directory__link"> Why I am Running </a></li>
+			</ul>
+
+		</div>
+	</div>
 
 	<!-- Header -->
 	<header class="header">
 		<nav class="header__navigation">
 			<ul class="navBar">
-				<li> <a class ="white-link" href="#"> Home </a> </li>
-				<li class = 'mobile-link'> <a class ="white-link" href="awards.html"> Awards </a> </li>
-				<li> <a class ="white-link" href="bio.html"> Biography </a> </li>
-				<li> <a class ="white-link" href="photos.html"> Photos </a> </li>
-				<li> <a class ="white-link" href="qualifications.html"> Why I Am Running </a> </li>
-				<li class = 'mobile-link'> <a class ="white-link" href="#"> Facebook </a> </li>
-				<li class = 'mobile-link'> <a class ="white-link" href="donate.html"> Donate Now </a> </li>
-				<li> <a id = "blue-link" href="#"> Faceb </a> </li>
-				<li> <a id = "red-link" href="donate.html"> Donate Now </a> </li>
+				<li> <a class="white-link" href="#"> Home </a> </li>
+				<li class='mobile-link'> <a class="white-link" href="awards.html"> Awards </a> </li>
+				<li> <a class="white-link" href="bio.html"> Biography </a> </li>
+				<li> <a class="white-link" href="photos.html"> Photos </a> </li>
+				<li> <a class="white-link" href="qualifications.html"> Why I Am Running </a> </li>
+				<li class='mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
+				<li class='mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
+				<li> <a id="blue-link" href="#"> Faceb </a> </li>
+				<li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
 			</ul>
 		</nav>
 		<div class="heading-flex-column">
@@ -96,7 +124,8 @@
 	<!-- Section -->
 	<main class="home-main">
 		<section class="mobile-content">
-			<div class="mobile-image"> <img id="mobile-donald-brown" src="images/electImg.jpg"  alt = "Professional Image Donald Brown Image"> </div>
+			<div class="mobile-image"> <img id="mobile-donald-brown" src="images/electImg.jpg"
+					alt="Professional Image Donald Brown Image"> </div>
 		</section>
 
 		<section class="home-body">
