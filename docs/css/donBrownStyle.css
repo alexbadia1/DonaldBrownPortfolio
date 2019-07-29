@@ -102,6 +102,143 @@ strong { font-weight: 900; }
 	padding-bottom: .3rem;
 	z-index: 90000000;  }
 
+.directory__checkbox {
+display: none; }
+
+.directory__button {
+width: 7rem;
+height: 7rem;
+border-radius: 50%;
+position: fixed;
+top: 5.5rem;
+right: 5.5rem;
+background-color: #333333;
+z-index: 999999999999;
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+text-align: center;
+cursor: pointer; }
+
+.directory__background {
+width: 5rem;
+height: 5rem;
+border-radius: 50%;
+position: fixed;
+top: 6.5rem;
+right: 6.5rem;
+background-image: radial-gradient(rgba(59, 89, 152, 1), rgb(126, 151, 205));
+/* radial-gradient(rgba(255, 219, 77, 0.9), rgba(230, 184, 0, 0.9));  GOLD*/
+z-index: 99999999;
+transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.directory-title {
+	font-size: 3.5vw;
+	padding-left: 2rem; }
+
+.directory__nav {
+height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 999999998;
+width: 0;
+opacity: 0;
+transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.directory__header {
+	padding-top: 5rem;
+	text-align: center; }
+
+.left-directory-list {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center; 
+	-moz-column-count: 2;
+    -webkit-column-count: 2;
+    -ms-column-count: 2;
+    column-count: 2;
+    -ms-column-rule: .1rem solid #f7f7f7;
+    -webkit-column-rule: .1rem solid #f7f7f7;
+    -moz-column-rule: .1rem solid #f7f7f7;
+    column-rule: .1rem solid #f7f7f7;
+    -ms-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    -webkit-column-gap: 4rem;
+    column-gap: 4rem;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; }
+
+.directory__item {
+margin: 1.5rem; }
+
+.directory__link {
+transition: all .4s; }
+
+.directory__link:link, .directory__link:visited {
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-size: 3rem;
+	font-weight: 300;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-size: 250%;
+	background-image: linear-gradient(120deg, transparent 0 50%, rgba(255, 255, 255, 0.8) 50%); }
+.directory__link:hover, .directory__link:active {
+	background-position: 100%;
+	color: #e6b800;
+	transform: translateX(0.2rem); }
+
+.directory__checkbox:checked ~ .directory__nav {
+opacity: 1;
+width: 100%; }
+
+.directory__checkbox:checked ~ .directory__background {
+transform: scale(90); }
+
+.directory__checkbox:checked + .directory__button .directory__icon::before {
+top: 0;
+transform: rotate(405deg); }
+
+.directory__checkbox:checked + .directory__button .directory__icon::after {
+top: 0;
+transform: rotate(-405deg); }
+
+.directory__icon {
+position: relative; }
+.directory__icon, .directory__icon::before, .directory__icon::after {
+	content: "";
+	width: 2.5rem;
+	height: 2px;
+	display: inline-block;
+	background-color: #f7f7f7; }
+.directory__icon {
+	margin-top: 3.5rem; }
+.directory__icon::before, .directory__icon::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	transition: all .5s; }
+.directory__icon::before {
+	top: -.8rem; }
+.directory__icon::after {
+	top: .8rem; }
+
+.directory__button:hover .directory__icon::after {
+top: 1rem; }
+
+.directory__button:hover .directory__icon::before {
+top: -1rem; }
+
+.directory__checkbox:checked + .directory__button .directory__icon {
+background-color: transparent; }
+
 /* Header title and subtitle containers */
 .header__text-box {
 	display: block;
@@ -266,7 +403,7 @@ animation-timing-function: ease-out; }
 	bottom: 15%;
 	position: absolute;
 	list-style: none;
-	z-index: 990000000; }
+	z-index: 9900; }
 
 /* Bottom left navigation image-link */
 #camera:link, #camera:visited {
@@ -733,8 +870,6 @@ to {opacity: 1} }
 	border-radius: 3px; }
 /*************************************************************Media Queries******************************************************/
 
-@media only screen and (max-width: 1050px) and (min-width: 700px) { }
-
 /* Small Desktops and Large Tablets*/
 @media only screen and (max-width: 1050px) and (min-width: 700px) {
 
@@ -756,6 +891,10 @@ to {opacity: 1} }
 	.heading-primary-subP, 
 	.heading-primary-subP, 
 	.heading-primary-sub { font-size: 1.15vw; }
+
+	.directory__nav {
+		font-size: 2vw;
+	}
 
 	/* Hiding the slide-show content */
 	#show-slide-buttons {display: none;}
