@@ -16,18 +16,47 @@
 
 <body>
 
+    <div class="directory">
+        <input type="checkbox" class="directory__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="directory__button">
+            <span class="directory__icon"> &nbsp;</span>
+        </label>
+
+        <div class="directory__background"></div>
+
+        <div class="directory__nav">
+            <h1 class="directory-title" style="color: white;"> Directory </h1>
+            <hr>
+
+            <ul class="left-directory-list">
+                <li class="directory__item"><a href="#" class="directory__link"> Voting Details </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> 2019 Election Calender </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Early Voting </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Early Voting Sites</a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> General Election Polling Sites </a>
+                </li>
+                <li class="directory__item"><a href="#" class="directory__link"> Absentee Ballots </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Getting To The Polls </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Professional Career</a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Early Years </a></li>
+                <li class="directory__item"><a href="#" class="directory__link"> Why I am Running </a></li>
+            </ul>
+
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <nav class="header__navigation">
             <ul class="navBar">
-                <li> <a class = "white-link" href = "index.html"> Home </a> </li>
-                <li class = 'mobile-link'> <a class="white-link" href="awards.html"> Awards </a> </li>
-                <li> <a class = "white-link" href = "bio.html"> Biography </a> </li>
-                <li> <a class = "white-link" href = "photos.html"> Photos </a> </li>
-                <li> <a class = "white-link" href = "qualifications.html"> Why I Am Running </a> </li>
-                <li class = 'mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
-				<li class = 'mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
-                <li> <a id = "blue-link" href = "#"> Faceb </a> </li>
+                <li> <a class="white-link" href="index.html"> Home </a> </li>
+                <li class='mobile-link'> <a class="white-link" href="awards.html"> Awards </a> </li>
+                <li> <a class="white-link" href="bio.html"> Biography </a> </li>
+                <li> <a class="white-link" href="photos.html"> Photos </a> </li>
+                <li> <a class="white-link" href="voting.html"> Voting Details </a> </li>
+                <li class='mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
+                <li class='mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
+                <li> <a id="blue-link" href="#"> Faceb </a> </li>
                 <li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
             </ul>
         </nav>
@@ -39,18 +68,19 @@
                     <span class="heading-primary-sub"> Help support the campaign to elect Donald D. Brown
                         for Town Of Poughkeepsie Justice. Make your check out to:</span>
                     <span class="heading-primary-sub">
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>The Campaign to Elect Donald 
-                        D. Brown Town Justice. </i> </span>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>The Campaign to Elect Donald
+                            D. Brown Town Justice. </i> </span>
                     <span class="heading-primary-sub"> Mail to: </span>
-                    <span class="heading-primary-sub"> 
+                    <span class="heading-primary-sub">
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Campaign to Elect Donald D. Brown <br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Town of Poughkeepsie Justice <br> 
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; att: Donna C Bett, Campaign Treasurer</i> </span>
-                    <span class="heading-primary-sub"> 
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            <i>PO BOX 2474</i> <br> 
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Poughkeepsie NY 12603 </i> </span>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Town of Poughkeepsie Justice <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; att: Donna C Bett, Campaign Treasurer</i>
+                    </span>
+                    <span class="heading-primary-sub">
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <i>PO BOX 2474</i> <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Poughkeepsie NY 12603 </i> </span>
                     <span class="heading-primary-sub"> <strong> THANK YOU FOR YOUR SUPPORT! </strong> </span>
                 </h1>
             </div>
@@ -97,7 +127,8 @@
     <!-- Section -->
     <main class="home-main">
         <section class="mobile-content">
-            <div class="mobile-image"> <img id="mobile-donald-brown" src="images/electImg.jpg" alt = "Donald Brown"> </div>
+            <div class="mobile-image"> <img id="mobile-donald-brown" src="images/electImg.jpg" alt="Donald Brown">
+            </div>
         </section>
 
     </main>
