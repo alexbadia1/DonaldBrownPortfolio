@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -16,6 +17,12 @@
 
 <body>
 
+    <script>
+        function unCheck() {
+            document.getElementById("navi-toggle").checked = false;
+        }
+    </script>
+
     <div class="directory">
         <input type="checkbox" class="directory__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="directory__button">
@@ -28,18 +35,40 @@
             <h1 class="directory-title" style="color: white;"> Directory </h1>
             <hr>
 
+            <!-- onClick is not the best solution to closing the directory when clicking on a link -->
             <ul class="left-directory-list">
-                <li class="directory__item"><a href="#" class="directory__link"> Voting Details </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> 2019 Election Calender </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Voting </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Voting Sites</a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> General Election Polling Sites </a>
+                <li class="directory__item"><a href="voting.html" class="directory__link" onclick="return unCheck()">
+                        Voting
+                        Details </a></li>
+
+                <li class="directory__item"><a href="voting.html#voting-details" class="directory__link"
+                        onclick='return unCheck()'> 2019 Election
+                        Calender </a></li>
+                <li class="directory__item"><a href="voting.html#early-voting" class="directory__link"
+                        onclick="return unCheck()"> Early Voting
+                    </a></li>
+                <li class="directory__item"><a href="voting.html#early-voting-sites" class="directory__link"
+                        onclick="return unCheck()"> Early
+                        Voting Sites </a></li>
+                <li class="directory__item"><a href="voting.html#polling-sites" class="directory__link"
+                        onclick="return unCheck()"> General
+                        Election Polling Sites </a>
                 </li>
-                <li class="directory__item"><a href="#" class="directory__link"> Absentee Ballots </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Getting To The Polls </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Professional Career</a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Years </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Why I am Running </a></li>
+                <li class="directory__item"><a href="voting.html#absentee-ballots" class="directory__link"
+                        onclick="return unCheck()"> Absentee
+                        Ballots </a></li>
+                <li class="directory__item"><a href="voting.html#getting-to-polls" class="directory__link"
+                        onclick="return unCheck()"> Getting To
+                        The Polls </a></li>
+                <li class="directory__item"><a href="bio.html#career" class="directory__link"
+                        onclick="return unCheck()"> Professional Career</a>
+                </li>
+                <li class="directory__item"><a href="bio.html#early-years" class="directory__link"
+                        onclick="return unCheck()"> Early Years </a>
+                </li>
+                <li class="directory__item"><a href="qualifications.html" class="directory__link"
+                        onclick="return unCheck()"> Why I am Running </a>
+                </li>
             </ul>
 
         </div>
@@ -54,12 +83,13 @@
                 <li> <a class="white-link" href="bio.html"> Biography </a> </li>
                 <li> <a class="white-link" href="photos.html"> Photos </a> </li>
                 <li> <a class="white-link" href="voting.html"> Voting Details </a> </li>
-                <li class='mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
+                <li class='mobile-link'> <a class="white-link" href="https://www.facebook.com/DonaldBrownforPOKJustice"> Facebook </a> </li>
                 <li class='mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
-                <li> <a id="blue-link" href="#"> Faceb </a> </li>
+                <li> <a id="blue-link" href="https://www.facebook.com/DonaldBrownforPOKJustice"> Faceb </a> </li>
                 <li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
             </ul>
         </nav>
+        
         <div class="heading-flex-column">
 
             <div class="header__text-box" id="primary-section">
@@ -134,51 +164,46 @@
                     Why Am I Qualified?
                 </h1>
                 <p class="home-details">
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I am a former Judge and a former prosecutor. As a
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I am a former Judge and prosecutor. As a
                     prosecutor, I handled all
                     criminal cases in the Town of Poughkeepsie Court, from shoplifting to murder. <br>
-                    I am the <strong>candidate</strong> who: <br>
+                    I am the <strong>ONLY</strong> candidate for this position who: <br>
                 </p>
 
                 <ul class="home-details" id="achievement-listQ">
-                    <li> Was President of the Dutchess County Bar Assn </li>
-                    <li> Was Chairman of the Judiciary Comm. of the Dutchess Co. Bar Assn. for 10 yrs.</li>
-                    <li> Was tried well over 200 civil and criminal jury cases in state and federal courts </li>
-                    <li> Has been recognized for extraordinary <i>pro bono</i> services to families of victims off
+                    <li> Was President of the Dutchess County Bar Association </li>
+                    <li> Was Chairman of the Judiciary Comm. of the Dutchess Co. Bar Association. for 10 yrs.</li>
+                    <li> Has tried well over 200 civil and criminal jury cases in state and federal courts </li>
+                    <li> Has been recognized for extraordinary <i>pro bono</i> services to families of victims of
                         Sept. 11, 2001 disaster at the World Trade Center.</li>
-                    <li> Served for more than 4 years as Probation Officer and Sr. Investigator in the
-                        Dutchess County Probation Dept. and the Office of Probation of the City of N.Y</li>
-                    <li> Was admitted to practice before the United State Supreme Court since 1984 </li>
+                    <li> Served for more than four years as probation officer and senior investigator in the
+                        Dutchess County Probation Deptartment and the Office of Probation of the City of New York</li>
+                    <li> Has been admitted to practice before the United State Supreme Court since 1984 </li>
                     <li> Has published legal articles and lectured lawyers on Trial Practice issues for the
-                        NYS Bar Assn </li>
-                    <li> Was a Faculty Member in Criminal Law at Marist College for 5 years </li>
+                        NYS Bar Association </li>
+                    <li> Was a faculty Member in criminal law at Marist College for five years </li>
                     <li> Received a ranking as a “Super Lawyer” based upon peer recommendations each
                         year over the past 15 years </li>
-                    <li> 40-year Member, NYS Magistrate’s Assn. </li>
+                    <li> Is a 40-year Member, NYS Magistrate’s Association. </li>
                 </ul>
 
                 <br>
 
                 <p class="home-details">
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For the past 20 years, I have received the highest
-                    rating from Judges and other
-                    attorneys from the Martindale-Hubbell rating agency which is the only truly independent,
-                    confidential peer review system in the country for over 70+ years. It’s highest rating
-                    (AV) is based upon Ethics and Legal Ability. Less than 3% of all attorneys in the U.S.
-                    have ever received the AV rating (which is updated every 2 years). I am most proud of
-                    this AV recognition. <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Perhaps the reason that I am best qualified for the
-                    job of Town Justice in
-                    Poughkeepsie, aside from the fact that I’ve lived here for most of the past 50 years,
-                    attended college here, coached Little League and practiced law here, is that <u>I’ve stood in
-                        the shoes of every person who comes before the Town.</u> I am a former Town Judge (in
-                    Millbrook, where I lived for 5 years after I left the D.A.’s Office), a former Asst. D.A. in
-                    the Town of Poughkeepsie, working 50-60 hours a week with the Judges, court personnel
-                    and, particularly, the Town Police Department. I spent 4 years in Probation, working a
-                    year in Dutchess Co. and then 3 ½ years working 4 p.m. to midnights in the Criminal
-                    Courts in Brooklyn and Manhattan for the NYC Office of Probation while attending law
-                    school days. I’ve represented clients before the Town Court from time to time over the
-                    years, as well. I have even been a defendant in a Town Court.
+                    rating from judges and
+                    other attorneys from the Martindale-Hubbell rating agency, the nation’s
+                    sole independent, confidential peer-review system. Its highest rating (AV) is
+                    based upon an attorney’s ethics and legal ability. Fewer than 3 percent of all
+                    attorneys in the United States have ever received the AV rating.<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Perhaps I am best qualified for the job of Town
+                    Justice in Poughkeepsie
+                    because I’ve stood in the shoes of every person who comes before this
+                    court. I am a former Town Judge (in Millbrook), a former assistant district
+                    attorney in the Town of Poughkeepsie, and a former probation worker in
+                    Dutchess County, Brooklyn and Manhattan. I also have represented clients
+                    before the Town Court and even been a defendant in a Town Court (in 1966
+                    case involving a minor traffic violation).
                     <img src="images/mugShot.jpg" alt="mugShot" class="mugShot">
                     In 1966, in my sophomore
                     year at Marist, I received a ticket for a traffic infraction and the judge imposed a sentence
@@ -187,24 +212,17 @@
                     money. He refused the request and sent me off to 3 days in the Dutchess County Jail. (If
                     you doubt this, just check out the mug shot on this site which I later retrieved with the
                     help of a detective friend from the Sheriff’s Office years, later during my DA days). <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The point, of course, is that the job of Town
-                    Justice requires someone with some
-                    patience, wisdom and <u> good judgment </u> (which that certain unnamed, and now long-
-                    deceased jurist, lacked). The job I am running for is not a “big job”; but it is an important
-                    job. Important to the people who have need to come into or before that court.<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; As a result of these many and varied experiences, I
+                    have developed the key
+                    qualities needed of a fair and effective Town Justice – patience, wisdom, and
+                    good judgment. While many may overlook the significance of this position, I
+                    am well aware of its importance to those who come before the Town Court.<br>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Finally, my best qualification may well be that
-                    <strong>I am not a politician</strong>. I did not seek
-                    this job. I was asked. I did not always want to be the Town Justice in the Town of
-                    Poughkeepsie. I retired from my law practice after 42 years, last April. I retained my law
-                    license in the event that I might use it one day to be of service in some way. I have been
-                    fortunate to have enjoyed a long and successful career and my career is over. I am no
-                    politico. I am interested only in being of some useful service to my family, friends and
-                    community. I seek no other job (political or otherwise). I seek no particular status. <strong> I am
-                        beholden to no party nor individuals. I seek only to do the job the way it should be
-                        done. I know the job quite well and how it should be done. </strong> I know that it is the
-                    busiest
-                    part-time court between White Plains and Albany. After my family, it will be my priority.
-                    it is a part time job and I will give it a a full-time commitment.
+                    <strong>I am not a politician</strong>. I seek only to do the job of Town Justice
+                    the way I know it should be done. I am well aware that the Town of
+                    Poughkeepsie’s is the busiest part-time court between White Plains and
+                    Albany. After my family, service to this court will be my top priority. Yes, it
+                    is a part-time job, but I promise to give it my full-time commitment.
                 </p>
 
                 <br>

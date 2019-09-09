@@ -6,46 +6,78 @@
 	<meta name="description" content="This is a website about Donald Brown running for the judge of Poughkeepsie">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="viewport" content="height=device-height, initial-scale=1.0">
-	<meta name="keywords" content="judge, primaries, poughkeepsie, Donald Brown">
+	<meta name="keywords" content="judge, primaries, poughkeepsie, Donald Brown, Donald Brown Poughkeepsie Judge">
 	<meta name="author" content="Alex Badia">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/donBrownStyle.css">
 	<title> Donald Brown Poughkeepsie Judge </title>
-
 </head>
 
 <body>
 
 	<script>
+		// Pop up notification when user is on an iPad
 		if (window.innerHeight > window.innerWidth && window.innerHeight > 699) {
 			alert("Please use Landscape on Tablets!");
-		}		
+		}
+
+		// Unchecked function
+		function unCheck() {
+			document.getElementById("navi-toggle").checked = false;
+		}
 	</script>
 
+	<!-- Directory -->
 	<div class="directory">
+
+		<!-- Directory icon button -->
 		<input type="checkbox" class="directory__checkbox" id="navi-toggle">
 		<label for="navi-toggle" class="directory__button">
 			<span class="directory__icon"> &nbsp;</span>
 		</label>
 
+		<!-- Directory background -->
 		<div class="directory__background"></div>
 
+		<!-- Directory title -->
 		<div class="directory__nav">
 			<h1 class="directory-title" style="color: white;"> Directory </h1>
 			<hr>
 
+			<!-- onClick is not the best solution to closing the directory when clicking on a link -->
 			<ul class="left-directory-list">
-				<li class="directory__item"><a href="#" class="directory__link"> Voting Details </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> 2019 Election Calender </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Early Voting </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Early Voting Sites</a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> General Election Polling Sites </a>
+				<li class="directory__item"><a href="voting.html" class="directory__link" onclick="return unCheck()">
+						Voting
+						Details </a></li>
+
+				<li class="directory__item"><a href="voting.html#voting-details" class="directory__link"
+						onclick='return unCheck()'> 2019 Election
+						Calender </a></li>
+				<li class="directory__item"><a href="voting.html#early-voting" class="directory__link"
+						onclick="return unCheck()"> Early Voting
+					</a></li>
+				<li class="directory__item"><a href="voting.html#early-voting-sites" class="directory__link"
+						onclick="return unCheck()"> Early
+						Voting Sites </a></li>
+				<li class="directory__item"><a href="voting.html#polling-sites" class="directory__link"
+						onclick="return unCheck()"> General
+						Election Polling Sites </a>
 				</li>
-				<li class="directory__item"><a href="#" class="directory__link"> Absentee Ballots </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Getting To The Polls </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Professional Career</a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Early Years </a></li>
-				<li class="directory__item"><a href="#" class="directory__link"> Why I am Running </a></li>
+				<li class="directory__item"><a href="voting.html#absentee-ballots" class="directory__link"
+						onclick="return unCheck()"> Absentee
+						Ballots </a></li>
+				<li class="directory__item"><a href="voting.html#getting-to-polls" class="directory__link"
+						onclick="return unCheck()"> Getting To
+						The Polls </a></li>
+				<li class="directory__item"><a href="bio.html#career" class="directory__link"
+						onclick="return unCheck()"> Professional Career</a>
+				</li>
+				<li class="directory__item"><a href="bio.html#early-years" class="directory__link"
+						onclick="return unCheck()"> Early Years </a>
+				</li>
+				<li class="directory__item"><a href="qualifications.html" class="directory__link"
+						onclick="return unCheck()"> Why I am Running </a>
+				</li>
 			</ul>
 
 		</div>
@@ -60,30 +92,36 @@
 				<li> <a class="white-link" href="bio.html"> Biography </a> </li>
 				<li> <a class="white-link" href="photos.html"> Photos </a> </li>
 				<li> <a class="white-link" href="voting.html"> Voting Details </a> </li>
-				<li class='mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
+				<li class='mobile-link'> <a class="white-link" href="https://www.facebook.com/DonaldBrownforPOKJustice"> Facebook </a> </li>
 				<li class='mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
-				<li> <a id="blue-link" href="#"> Faceb </a> </li>
+				<li> <a id="blue-link" href="https://www.facebook.com/DonaldBrownforPOKJustice"> Faceb </a> </li>
 				<li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
 			</ul>
 		</nav>
+
+		<!-- Main Title -->
 		<div class="heading-flex-column">
 
 			<div class="header__text-boxIndex" id="primary-section">
 				<h1 class="heading-primary">
 					<span class="heading-primary-main"> Donald D. Brown For Town of Poughkeepsie Justice </span>
 					<br>
-					<span class="heading-primary-sub"> <i> "A Lifetime's experience and a full-time commitment" </i></span>
+					<span class="heading-primary-sub"> <i> "A Lifetime's experience and a full-time commitment"
+						</i></span>
 					<br>
 				</h1>
 				<a href="voting.html" class="button-gray button-gray-animate"> Voting </a>
 			</div>
 		</div>
+
+		<!-- Bottom Navigation Bar Image Links-->
 		<ul class="flex-row-logo">
 			<li> <a id="camera" href="bio.html"> P </a> </li>
 			<li> <a id="ribbon" href="awards.html"> T </a> </li>
 			<li> <a id="question" href="qualifications.html"> A </a> </li>
 		</ul>
 
+		<!-- Bottom navigation bar title captions -->
 		<div class="flex-row-header">
 			<div class="photo__text-box">
 				<h1 class="photo__heading-primary">
@@ -103,11 +141,13 @@
 				</h1>
 			</div>
 		</div>
-
+		
+		<!-- Flagbackgorund container -->
 		<div class="header__image-container1">
 			<img class="flag" src="images/flagBackground.jpg" alt="Donald D. Brown Junior">
 		</div>
 
+		<!-- Portrait container -->
 		<div class="header__image-flex-container2">
 			<div class="header__image-container2">
 				<img class="donBrown" src="images/DonBrownFullVert1.jpg" alt="Donald D. Brown Junior">

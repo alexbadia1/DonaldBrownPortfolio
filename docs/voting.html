@@ -16,37 +16,69 @@
 
 <body>
 
+    <script>
+        function unCheck() {
+            document.getElementById("navi-toggle").checked = false;
+        }
+    </script>
+
+    <!-- Directory -->
     <div class="directory">
         <input type="checkbox" class="directory__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="directory__button">
-            <span class="directory__icon"> &nbsp;</span>
+            <span class="directory__icon"> &nbsp; </span>
         </label>
 
+        <!-- Directory background -->
         <div class="directory__background"></div>
 
+        <!-- Directory title -->
         <div class="directory__nav">
             <h1 class="directory-title" style="color: white;"> Directory </h1>
             <hr>
 
+            <!-- onClick is not the best solution to closing the directory when clicking on a link -->
             <ul class="left-directory-list">
-                <li class="directory__item"><a href="#" class="directory__link"> Voting Details </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> 2019 Election Calender </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Voting </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Voting Sites</a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> General Election Polling Sites </a>
-                </li>
-                <li class="directory__item"><a href="#" class="directory__link"> Absentee Ballots </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Getting To The Polls </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Professional Career</a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Early Years </a></li>
-                <li class="directory__item"><a href="#" class="directory__link"> Why I am Running </a></li>
-            </ul>
+                <li class="directory__item"><a href="voting.html" class="directory__link" onclick="return unCheck()">
+                        Voting
+                        Details </a></li>
 
+                <li class="directory__item"><a href="voting.html#voting-details" class="directory__link"
+                        onclick='return unCheck()'> 2019 Election
+                        Calender </a></li>
+                <li class="directory__item"><a href="voting.html#early-voting" class="directory__link"
+                        onclick="return unCheck()"> Early Voting
+                    </a></li>
+                <li class="directory__item"><a href="voting.html#early-voting-sites" class="directory__link"
+                        onclick="return unCheck()"> Early
+                        Voting Sites </a></li>
+                <li class="directory__item"><a href="voting.html#polling-sites" class="directory__link"
+                        onclick="return unCheck()"> General
+                        Election Polling Sites </a>
+                </li>
+                <li class="directory__item"><a href="voting.html#absentee-ballots" class="directory__link"
+                        onclick="return unCheck()"> Absentee
+                        Ballots </a></li>
+                <li class="directory__item"><a href="voting.html#getting-to-polls" class="directory__link"
+                        onclick="return unCheck()"> Getting To
+                        The Polls </a></li>
+                <li class="directory__item"><a href="bio.html#career" class="directory__link"
+                        onclick="return unCheck()"> Professional Career</a>
+                </li>
+                <li class="directory__item"><a href="bio.html#early-years" class="directory__link"
+                        onclick="return unCheck()"> Early Years </a>
+                </li>
+                <li class="directory__item"><a href="qualifications.html" class="directory__link"
+                        onclick="return unCheck()"> Why I am Running </a>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- Header -->
     <header class="header">
+
+        <!-- Top Bar Navigation -->
         <nav class="header__navigation">
             <ul class="navBar">
                 <li> <a class="white-link" href="index.html"> Home </a> </li>
@@ -54,14 +86,19 @@
                 <li> <a class="white-link" href="bio.html"> Biography </a> </li>
                 <li> <a class="white-link" href="photos.html"> Photos </a> </li>
                 <li> <a class="white-link" href="voting.html"> Voting Details </a> </li>
+
+                <!-- Creates two mobile links for mobile viewports -->
                 <li class='mobile-link'> <a class="white-link" href="#"> Facebook </a> </li>
                 <li class='mobile-link'> <a class="white-link" href="donate.html"> Donate Now </a> </li>
+
+                <!-- Icon links only show on tablets and desktops -->
                 <li> <a id="blue-link" href="#"> Faceb </a> </li>
                 <li> <a id="red-link" href="donate.html"> Donate Now </a> </li>
             </ul>
         </nav>
-        <div class="heading-flex-column">
 
+        <!-- Main title -->
+        <div class="heading-flex-column">
             <div class="header__text-box" id="primary-section">
                 <h1 class="heading-primary">
                     <span class="heading-primary-main"> Donald D. Brown For Town of Poughkeepsie Justice </span>
@@ -77,6 +114,8 @@
                 <a href="#voting-details" class="button-gray button-gray-animate"> Voting Details! </a>
             </div>
         </div>
+
+        <!-- Bottom navigation imge links -->
         <ul class="flex-row-logo">
             <li> <a id="camera" href="bio.html"> P </a> </li>
             <li> <a id="ribbon" href="awards.html"> T </a> </li>
@@ -103,10 +142,12 @@
             </div>
         </div>
 
+        <!-- Header background image container -->
         <div class="header__image-container1">
             <img class="flag" src="images/flagBackground.jpg" alt="Donald D. Brown Junior">
         </div>
 
+        <!-- Header portrait container -->
         <div class="header__image-flex-container2">
             <div class="header__image-container2">
                 <img class="donBrown" src="images/DonBrownFullVert1.jpg" alt="Donald D. Brown Junior">
@@ -146,7 +187,7 @@
 
                 <br>
 
-                <h2 class="home-secondary-header voting-details"> EARLY VOTING
+                <h2 class="home-secondary-header voting-details" id="early-voting"> EARLY VOTING
                 </h2>
 
                 <p class="home-details">
@@ -175,7 +216,7 @@
 
                 <br>
 
-                <h2 class="home-secondary-header voting-details"> EARLY VOTING SITES
+                <h2 class="home-secondary-header voting-details" id="early-voting-sites"> EARLY VOTING SITES
                 </h2>
 
                 <p class="home-details">
@@ -196,7 +237,7 @@
 
                 <br>
 
-                <h2 class="home-secondary-header voting-details"> GENERAL ELECTION
+                <h2 class="home-secondary-header voting-details" id="polling-sites"> GENERAL ELECTION
                     POLLING SITES
                 </h2>
 
@@ -211,7 +252,7 @@
 
                 <br>
 
-                <h2 class="home-secondary-header voting-details">
+                <h2 class="home-secondary-header voting-details" id="absentee-ballots">
                     ABSENTEE BALLOTS
                 </h2>
 
@@ -232,7 +273,7 @@
 
                 <br>
 
-                <h2 class="home-secondary-header voting-details">
+                <h2 class="home-secondary-header voting-details" id="getting-to-polls">
                     GETTING TO THE POLLS
                 </h2>
 
